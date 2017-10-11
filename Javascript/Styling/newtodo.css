@@ -1,0 +1,11 @@
+.over {
+	color: orange;
+	text-shadow: 5px 10px 20px black;
+}
+
+.strikethrough {
+	text-decoration: line-through;
+	opacity: .5;
+	color: black;
+	text-shadow: 0 0 0 white;
+}

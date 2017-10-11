@@ -1,0 +1,28 @@
+.container-2 {
+	width: 250px;
+	margin:auto;
+	background-color: white;
+	opacity: .85;
+	border-radius: 4px;
+}
+
+.button {
+	font-size: 40px;
+}
+
+body {
+	background-image: url("http://eskipaper.com/images/wave-background-2.jpg");
+}
+
+.jumbotron {
+	opacity: .85;
+}
+
+.form-group {
+	padding: 20px;
+}
+
+form button {
+	margin: 0 0 20px 85px;
+
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<!-- Load the Paper.js library -->
+	<script type="text/javascript" src="paper-full.js"></script>
+	<!-- Define inlined PaperScript associate it with myCanvas -->
+	<script type="text/paperscript" canvas="myCanvas">
+		var color1 = document.getElementById('color1');
+		var color2 = document.getElementById('color2');
+		var color3 = document.getElementById('color3');
+		var color4 = document.getElementById('color4');
+		var color5 = document.getElementById('color5');
+		var color6 = document.getElementById('color6');
+		var colors = [color1, color2, color3, color4, color5, color6];
+
+		var radius1 = document.getElementById('radius1');
+		var radius2 = document.getElementById('radius2');
+		var radius3 = document.getElementById('radius3');
+		var radius4 = document.getElementById('radius4');
+		var radius5 = document.getElementById('radius5');
+		var radius6 = document.getElementById('radius6');
+		var radiuses = [radius1, radius2, radius3, radius4, radius5, radius6];
+
+		var clear = document.getElementById("clear");
+		var paintColor;
+		var selectedRadius;
+		
+		clear.addEventListener('click', function(){
+			if (confirm("Are you sure you want to clear?") == true) {
+				location.reload();
+			}
+		});
+
+		colors.forEach(function(color){
+			color.addEventListener("click", colorAddSelected);
+		});
+
+		//Add the "slected" border to clicked color and assign to circle
+		function colorAddSelected(){
+			colors.forEach(function(color){
+				color.classList.remove("selected");
+			});
+			this.classList.add("selected");
+			paintColor = getComputedStyle(this).getPropertyValue("background-color");
+		}
+
+		radiuses.forEach(function(radius){
+			radius.addEventListener("click", radiusAddSelected);
+		});		
+
+		//Add the "slected" border to clicked radius and assign to circle raidus
+		function radiusAddSelected(){
+			radiuses.forEach(function(radius){
+				radius.classList.remove("selected");
+			});
+			this.classList.add("selected");
+			//Couldn't use numbered CSS id's, so this is the way I created a number for each radius. V
+			selectedRadius = Number((getComputedStyle(this).getPropertyValue("font-size")).slice(0,2));
+		}
+
+		function fetch(){
+			var colorSelector = document.getElementById("get").value;
+			colors.forEach(function(color){
+				color.classList.remove("selected");
+			});
+			this.classList.add("selected");
+			paintColor = colorSelctor;
+		}
+
+
+		// function onFrame(event){
+		// 		circles[i].scale(.92);	
+		// 		if(circles[i].area < 1){
+		// 			circles[i].remove();
+		// 			circles.splice(i, 1);
+		// 			i--;
+		// 		}
+		// 	}
+		// }
+		
+
+
+			function onMouseDrag(event) {
+						var myCircle = new Path.Circle(new Point(event.point), selectedRadius);
+						myCircle.fillColor = (paintColor);
+				};	 
+			
+
+
+
+	
+	</script>
+	<link rel="stylesheet" type="text/css" href="paint.css">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row wrapper">
+			<div class="col-sm-12 banner jumbotron"><h1 class="display-3"><!-- Alex's Hella Dope  -->Paint App</h1></div>
+		</div>
+			<div class="row"> <!-- Row with all tools and canvas -->
+				<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 tools"> <!-- Column with only tools -->
+					<div class="row"> <!-- color row in tools column -->
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-2 colors" id="color1"></div>
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-2 colors" id="color2"></div>
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-2 colors" id="color3"></div>
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-2 colors" id="color4"></div>
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-2 colors" id="color5"></div>
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-2 colors" id="color6"></div>
+					</div> <!-- End color row in tools column -->
+					<div class="row">
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-2 radiuses" id="radius1">
+							<div class= "d-block mx-auto radius-circles" id="radius1-circle"></div>
+						</div>
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-2 radiuses" id="radius2">
+							<div class= "d-block mx-auto radius-circles" id="radius2-circle"></div>
+						</div>
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-2 radiuses" id="radius3">
+							<div class= "d-block mx-auto radius-circles" id="radius3-circle"></div>
+						</div>
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-2 radiuses" id="radius4">
+							<div class= "d-block mx-auto radius-circles" id="radius4-circle"></div>
+						</div>
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-2 radiuses" id="radius5">
+							<div class= "d-block mx-auto radius-circles" id="radius5-circle"></div>
+						</div>
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-2 radiuses" id="radius6">
+							<div class= "d-block mx-auto radius-circles" id="radius6-circle"></div>
+						</div>
+					</div><!-- End radiuses row in tools colums -->
+					<div class="row">
+						<button id="clear">Clear</button>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 canv">
+					<div class="row">
+						<canvas id="myCanvas" resize></canvas>
+					</div>
+				</div>
+			</div>
+	</div>
+</body>
+</html>

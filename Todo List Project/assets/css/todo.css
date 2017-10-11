@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700');
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: Nunito;
+	/*background-color: #69B5B5;*/
+	color: #444;
+	font-weight: 200;
+	background: #1c92d2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #69B5B5, #E3F9F9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #69B5B5, #E3F9F9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+	background-color: #226666;
+	line-height: .8em;
+	color: #F4FFFF;
+	padding: .5em .7em;
+	font-weight: 400;
+	margin: 0;
+	text-transform: uppercase;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+input {
+	color: #226666;
+	font-size: 1em;
+	background: #C1F2F2;
+	box-sizing: border-box;
+	width: 100%;
+	padding:.8em;
+	/*This v border was neccessary to get the box to line up
+	when the input is focused on*/
+	border: 2px solid rgba(0,0,0,0);
+}
+
+input:focus {
+	border: 2px solid #226666;
+	outline: none;
+	background: white;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-weight: 600;
+}
+
+li {
+	background: #E3F9F9;
+	line-height: 2.2em;
+	padding-left: 1em;
+}
+
+li:nth-child(2n){
+	background: #C1F2F2;
+}
+
+span {
+	background: red;
+	float: right;
+	width: 0;
+	text-align: center;
+	height: 2.15em;
+	color: white;
+	opacity: 0;
+	display: inline-block;
+	transition: .2s linear;
+}
+
+li:hover span {
+	opacity: 1;
+	width: 2.15em;
+}
+
+h1 i {
+	float: right;
+	margin-top: -5px;
+	text-shadow: 1px 2px 10px black;
+}
+
+h1 i:active {
+	color: #339999;
+}
+
+#container {
+	width: 360px;
+	margin: 0 auto;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+	margin-top: 6%;
+}
+
+.completed {
+	color: gray;
+	text-decoration: line-through;
+}
+
+
+
+
+

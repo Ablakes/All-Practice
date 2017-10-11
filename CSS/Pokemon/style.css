@@ -1,0 +1,90 @@
+p {
+
+}
+
+.boxes {
+	border: 1px solid;
+	width: 50px;
+	height: 52px;
+	float: left;
+}
+
+#box1 {
+	border-left-color: white;
+	border-top-color: white;
+}
+
+#box2{
+	border-top-color: white;
+}
+
+#box3{
+	border-color: white white black black;
+}
+
+#box4{
+	border-color: black black black white;
+}
+
+#box6{
+	border-right-color: white;
+}
+
+#box7{
+	border-color: black black white white;
+}
+
+#box8 {
+	border-bottom-color: white;
+}
+
+#box9{
+	border-color: black white white black;
+}
+
+.tic {
+	margin: 10px 0;
+
+}
+
+.tac{
+
+}
+.tac td {
+	border: 1px solid black;
+	width: 50px;
+	height: 50px;
+	margin: -2px;
+}
+
+#cell1 {
+	border-left-color: white;
+	border-top-color: white;
+}
+
+#cell2{
+	border-top-color: white;
+}
+
+#cell3{
+	border-color: white white black black;
+}
+
+#cell4{
+	border-color: black black black white;
+}
+
+#cell6{
+	border-right-color: white;
+}
+
+#cell7{
+	border-color: black black white white;
+}
+
+#cell8 {
+	border-bottom-color: white;
+}
+
+#cell9{
+	border-color: black white white black;cell

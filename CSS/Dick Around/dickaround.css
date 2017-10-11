@@ -1,0 +1,152 @@
+html, canvas, .tools {
+	height: 100%;
+	border: 1px solid black;
+	margin: -1px;
+	padding: 0;
+}
+
+body{
+	height: 1000px;
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.banner{
+	text-align: center;
+	height: 50px;
+}
+
+.colors-container, .radiuses-container {
+	height: 40px;
+	float: left;
+}
+.colors, .radiuses{
+	display: inline-block;
+	width: 38.3px;
+	height: 38px;
+	background-color: green;
+	margin-right: -4px;
+	border-radius: 8px;
+}
+
+.tools {
+	width: 20%;
+	display: inline-block;
+}
+
+.canvas {
+	width: 80%;
+	margin:-6px -5px -1px -5px;
+	display: inline-block;
+}
+
+.radius1-circle {
+	width: 20%;
+	height: 20%;
+	background: black;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+
+.radius2-circle {
+	width: 35%;
+	height: 35%;
+	background: black;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+
+.radius3-circle {
+	width: 16px;
+	height: 16px;
+	background: black;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.radius4-circle {
+	width: 21px;
+	height: 21px;
+	background: black;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.radius5-circle {
+	width: 24px;
+	height: 24px;
+	background: black;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+
+.radius6-circle {
+	width: 26px;
+	height: 26px;
+	background: black;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.radiuses {
+	display: flex;
+	align-items: center;
+	float: left;
+	margin: .5px;
+}
+
+.radius-circles {
+	display: block;
+	margin: 0 auto;
+}
+
+
+/*------Start Media--------*/
+
+@media screen and (max-width: 768px) {
+
+body {
+	width: 100%;
+}
+
+.colors-container, .radiuses-container {
+	width: 50%;
+	float: left;
+}
+
+
+
+.tools {
+	width: 100%;
+}
+
+}
+
+/*Start small media*/
+
+@media screen and (max-width: 497px) {
+
+.colors-container, .radiuses-container {
+	width: 100%;
+	text-align: center;
+	background-color: red;
+}
+
+.radiuses-container {
+	display: flex;
+	align-items: center;
+	background-color: black;
+	text-align: center;
+}
+
+}
+

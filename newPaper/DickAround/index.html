@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Load the Paper.js library -->
+<script type="text/javascript" src="paper-full.js"></script>
+<!-- Define inlined PaperScript associate it with myCanvas -->
+<script type="text/paperscript" canvas="myCanvas">
+	// Create a Paper.js Path to draw a line into it:
+
+	var path = new Path();
+	var button = document.querySelector("button");
+
+	button.addEventListener("click", function(){
+		var xAxis = (document.getElementById("xAxis").value);
+		var yAxis = (document.getElementById("yAxis").value);
+
+		var radius = (document.getElementById("radius").value);
+		if(document.getElementById("circle").checked){
+			var myCircle = new Path.Circle(new Point(xAxis + ", " + yAxis), radius);
+			myCircle.fillColor = 'red';
+			console.log(myCircle);
+		}else if(document.getElementById("rectangle").checked){
+			var firstPoint = document.getElementById("firstPoint").value;
+			var secondPoint= document.getElementById("secondPoint").value;
+			var rectangle = new Rectangle(new Point(firstPoint), new Point(secondPoint));
+			var path = new Path.Rectangle(rectangle);
+			path.fillColor = 'orange';
+
+		}else{
+			console.log("not checked");
+		}
+	});
+
+	function onMouseDown(event) {
+	// Create a path:
+	path = new Path();
+	path.strokeColor = 'black';
+	// Add the mouse down position:
+	path.add(event.point);
+	var myCircle = new Path.Circle(event.point, 50);
+	myCircle.fillColor = 'green';
+}
+
+function onMouseDrag(event) {
+	var myCircle = new Path.Circle(event.point, 50);
+	myCircle.fillColor = 'green';
+}
+
+
+if (document.getElementById('circle').checked){
+
+}
+
+	
+</script>
+<link rel="stylesheet" type="text/css" href="newPaper.css">
+</head>
+<body>
+	<input type="radio" id="circle">Circle
+	<input type="text" id="xAxis" placeholder="x-axis">
+	<input type="text" id="yAxis" placeholder="y-axis">
+	<input type="text" id="radius" placeholder="radius"><br>
+	<input type="checkbox" id="rectangle">Rectangle
+	<input type="text" id="firstPoint" placeholder="First Point">
+	<input type="text" id="secondPoint" placeholder="Second Point">
+	
+	<button>Submit</button>
+	<canvas id="myCanvas" resize></canvas>
+	<script src="newPaper.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+*{
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+}
+
+div {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+h1 {
+	font-size: 3em !important;
+}
+
+.container-fluid {
+	height:100%;
+	width: 100%;
+}
+
+.wrapper{
+	height:11%;
+	width: 100%;
+}
+
+.banner{
+	width: 100%;
+	height: 100%;
+}
+
+.jumbotron {
+	text-align: center;
+}
+
+.tools {
+	height: 100%
+}
+
+.canv {
+	height: 100%;
+	width: 100%;
+}
+
+.colors {
+	border: 1px solid black;
+	height: 40px;
+	border-radius: 5px;
+}
+
+.radiuses {
+	border: 1px solid black;
+	height: 40px;
+	width:40px;
+	border-radius: 5px;
+	display: flex;
+  	align-items: center;
+}
+
+.selected {
+	box-shadow:0 0 0 3px rgba(0,123,255,.5);
+}
+
+.colors-row, .radiuses-row {
+	width: 20%;
+}
+
+.colors, .radiuses {
+	width: 32px;
+	height: 32px;
+}
+
+canvas {
+	width: 100%;
+	height: 100%;
+	background-color: black;
+}
+
+#color1 {
+	background-color: red;
+}
+#color2 {
+	background-color: orange;
+}
+#color3 {
+	background-color: yellow;
+}
+#color4 {
+	background-color: green;
+}
+#color5 {
+	background-color: blue;
+}
+#color6 {
+	background-color: purple;
+}
+
+#radius1 {
+	font-size: 10px;
+	display: grid;
+}
+
+.radius-circles{
+}
+#radius1-circle {
+	width: 7px;
+	height: 7px;
+	background: black;
+	-moz-border-radius: 3.5px;
+	-webkit-border-radius: 3.5px;
+	border-radius: 3.5px;
+}
+
+#radius2 {
+	font-size: 20px;
+	display: grid;
+}
+
+#radius2-circle {
+	width: 11px;
+	height: 11px;
+	background: black;
+	-moz-border-radius: 5.5px;
+	-webkit-border-radius: 5.5px;
+	border-radius: 5.5px;
+}
+
+#radius3 {
+	font-size: 30px;
+	display: grid;
+}
+
+#radius3-circle {
+	width: 16px;
+	height: 16px;
+	background: black;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+}
+#radius4 {
+	font-size: 40px;
+	display: grid;
+}
+
+#radius4-circle {
+	width: 21px;
+	height: 21px;
+	background: black;
+	-moz-border-radius: 10.5px;
+	-webkit-border-radius: 10.5px;
+	border-radius: 10.5px;
+}
+#radius5 {
+	font-size: 50px;
+	display: grid;
+}
+
+#radius5-circle {
+	width: 24px;
+	height: 24px;
+	background: black;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+}
+
+#radius6 {
+	font-size: 60px;
+	display: grid;
+}
+
+#radius6-circle {
+	width: 26px;
+	height: 26px;
+	background: black;
+	-moz-border-radius: 13px;
+	-webkit-border-radius: 13px;
+	border-radius: 13px;
+}
+
+
+

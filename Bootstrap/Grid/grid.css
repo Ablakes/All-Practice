@@ -1,0 +1,32 @@
+body, html {
+	height: 100%;
+	width: 100%;
+}
+
+.container-fluid {
+	height: 100%;
+}
+
+.action{
+	height:100%;
+}
+
+.title {
+	height: 100px;
+	background-color: blue;
+}
+
+.tools {
+	height: 100%;
+	background-color: green;
+}
+
+.palette {
+	height: 20px;
+	border: 1px solid black;
+}
+
+.canv {
+	height: 100%;
+	background-color: black;
+}

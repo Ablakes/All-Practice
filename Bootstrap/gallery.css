@@ -1,0 +1,31 @@
+body {
+	padding-top: 70px; 
+}
+
+div .jumbotron {
+	color: #2c3e50;
+}
+
+.navbar-collapse>li>a {
+	color: white;
+}
+
+#navigation {
+	color: #2c3e50;	
+}
+
+.navbar-inverse .navbar-brand {
+	color: white;
+}
+
+.navbar-brand {
+	color: white;
+}
+
+.navbar-nav li a{
+	color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: white;
+}
